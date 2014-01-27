@@ -103,6 +103,9 @@ header h2 {
 	padding-top: 20px;
 }
 
+..fb_iframe_widget{
+	padding-top: 20px;
+}
 #content-wrapper {
   border-top: solid 1px #fff;
   padding-top: 30px;
