@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/hongsw/ajin-kcp-payment-woocommerce.png?label=ready)](https://waffle.io/hongsw/ajin-kcp-payment-woocommerce)
 ajin-kcp-payment-woocommerce
 ============================
 
