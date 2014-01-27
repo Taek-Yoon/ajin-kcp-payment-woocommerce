@@ -95,6 +95,10 @@ header h2 {
   margin: 0 auto;
 }
 
+.indent{
+	padding-left: 35px;
+}
+
 #content-wrapper {
   border-top: solid 1px #fff;
   padding-top: 30px;
