@@ -80,6 +80,7 @@ header h1 {
   line-height: 1;
   margin-bottom: 0.2em;
   width: 540px;
+  font-family: 'Nanum Gothic Coding', monospace;
 }
 
 header h2 {
