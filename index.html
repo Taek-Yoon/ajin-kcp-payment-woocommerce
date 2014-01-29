@@ -1,269 +1,51 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Ajin-KCP-Payment-Woocommerce : KCP Payment Gateway Plugin for WooCommerce, 한국사이버결제(KCP)용 우커머스 결제플러그인 입니다. " />
 
-  ga('create', 'UA-47565560-1', 'hongsw.github.io');
-  ga('send', 'pageview');
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-</script>
-    <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>Ajin-KCP-Payment-Woocommerce by hongsw</title>
-  
-  	
-<script type="text/javascript">
-var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
-try {
-    var jqueryLoaded=jQuery;
-    jqueryLoaded=true;
-} catch(err) {
-    var jqueryLoaded=false;
-}
-var head= document.getElementsByTagName('head')[0];
-if (!jqueryLoaded) {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
-    head.appendChild(script);
-    if (script.readyState && script.onload!==null){
-        script.onreadystatechange= function () {
-              if (this.readyState == 'complete') mce_preload_check();
-        }    
-    }
-}
-
-var err_style = '';
-try{
-    err_style = mc_custom_error_style;
-} catch(e){
-    err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
-}
-var head= document.getElementsByTagName('head')[0];
-var style= document.createElement('style');
-style.type= 'text/css';
-if (style.styleSheet) {
-  style.styleSheet.cssText = err_style;
-} else {
-  style.appendChild(document.createTextNode(err_style));
-}
-head.appendChild(style);
-setTimeout('mce_preload_check();', 250);
-
-var mce_preload_checks = 0;
-function mce_preload_check(){
-    if (mce_preload_checks>40) return;
-    mce_preload_checks++;
-    try {
-        var jqueryLoaded=jQuery;
-    } catch(err) {
-        setTimeout('mce_preload_check();', 250);
-        return;
-    }
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
-    head.appendChild(script);
-    try {
-        var validatorLoaded=jQuery("#fake-form").validate({});
-    } catch(err) {
-        setTimeout('mce_preload_check();', 250);
-        return;
-    }
-    mce_init_form();
-}
-function mce_init_form(){
-    jQuery(document).ready( function($) {
-      var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
-      var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
-      $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
-      options = { url: 'http://ajinsys.us6.list-manage.com/subscribe/post-json?u=01ccb111b43b892d030a45b3c&id=eeefba68fa&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
-                    beforeSubmit: function(){
-                        $('#mce_tmp_error_msg').remove();
-                        $('.datefield','#mc_embed_signup').each(
-                            function(){
-                                var txt = 'filled';
-                                var fields = new Array();
-                                var i = 0;
-                                $(':text', this).each(
-                                    function(){
-                                        fields[i] = this;
-                                        i++;
-                                    });
-                                $(':hidden', this).each(
-                                    function(){
-                                        var bday = false;
-                                        if (fields.length == 2){
-                                            bday = true;
-                                            fields[2] = {'value':1970};//trick birthdays into having years
-                                        }
-                                    	if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
-                                    		this.value = '';
-									    } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
-                                    		this.value = '';
-									    } else {
-									        if (/\[day\]/.test(fields[0].name)){
-    	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
-									        } else {
-    	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
-	                                        }
-	                                    }
-                                    });
-                            });
-                        $('.phonefield-us','#mc_embed_signup').each(
-                            function(){
-                                var fields = new Array();
-                                var i = 0;
-                                $(':text', this).each(
-                                    function(){
-                                        fields[i] = this;
-                                        i++;
-                                    });
-                                $(':hidden', this).each(
-                                    function(){
-                                        if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
-                                    		this.value = '';
-									    } else {
-									        this.value = 'filled';
-	                                    }
-                                    });
-                            });
-                        return mce_validator.form();
-                    }, 
-                    success: mce_success_cb
-                };
-      $('#mc-embedded-subscribe-form').ajaxForm(options);
-      
-      
-    });
-}
-function mce_success_cb(resp){
-    $('#mce-success-response').hide();
-    $('#mce-error-response').hide();
-    if (resp.result=="success"){
-        $('#mce-'+resp.result+'-response').show();
-        $('#mce-'+resp.result+'-response').html(resp.msg);
-        $('#mc-embedded-subscribe-form').each(function(){
-            this.reset();
-    	});
-    } else {
-        var index = -1;
-        var msg;
-        try {
-            var parts = resp.msg.split(' - ',2);
-            if (parts[1]==undefined){
-                msg = resp.msg;
-            } else {
-                i = parseInt(parts[0]);
-                if (i.toString() == parts[0]){
-                    index = parts[0];
-                    msg = parts[1];
-                } else {
-                    index = -1;
-                    msg = resp.msg;
-                }
-            }
-        } catch(e){
-            index = -1;
-            msg = resp.msg;
-        }
-        try{
-            if (index== -1){
-                $('#mce-'+resp.result+'-response').show();
-                $('#mce-'+resp.result+'-response').html(msg);            
-            } else {
-                err_id = 'mce_tmp_error_msg';
-                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
-                
-                var input_id = '#mc_embed_signup';
-                var f = $(input_id);
-                if (ftypes[index]=='address'){
-                    input_id = '#mce-'+fnames[index]+'-addr1';
-                    f = $(input_id).parent().parent().get(0);
-                } else if (ftypes[index]=='date'){
-                    input_id = '#mce-'+fnames[index]+'-month';
-                    f = $(input_id).parent().parent().get(0);
-                } else {
-                    input_id = '#mce-'+fnames[index];
-                    f = $().parent(input_id).get(0);
-                }
-                if (f){
-                    $(f).append(html);
-                    $(input_id).focus();
-                } else {
-                    $('#mce-'+resp.result+'-response').show();
-                    $('#mce-'+resp.result+'-response').html(msg);
-                }
-            }
-        } catch(e){
-            $('#mce-'+resp.result+'-response').show();
-            $('#mce-'+resp.result+'-response').html(msg);
-        }
-    }
-}
-
-</script>
-<!--End mc_embed_signup-->
+    <title>Ajin-KCP-Payment-Woocommerce</title>
   </head>
 
   <body>
-  
 
-    <header>
-      <div class="inner">
-        <h1>Ajin-KCP-Payment-Woocommerce</h1>
-        <h2>KCP Payment Gateway Plugin for WooCommerce, 한국사이버결제(KCP)용 우커머스 결제플러그인 입니다. </h2>
-        <a href="https://github.com/hongsw/ajin-kcp-payment-woocommerce" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hongsw/ajin-kcp-payment-woocommerce">View on GitHub</a>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
+          <h1 id="project_title">Ajin-KCP-Payment-Woocommerce</h1>
+          <h2 id="project_tagline">KCP Payment Gateway Plugin for WooCommerce, 한국사이버결제(KCP)용 우커머스 결제플러그인 입니다. </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hongsw/ajin-kcp-payment-woocommerce/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hongsw/ajin-kcp-payment-woocommerce/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
 <a name="%ED%95%9C%EA%B5%AD%EC%82%AC%EC%9D%B4%EB%B2%84%EA%B2%B0%EC%A0%9Ckcp%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%9A%B0%EC%BB%A4%EB%A8%B8%EC%8A%A4-%EA%B2%B0%EC%A0%9C%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%9E%85%EB%8B%88%EB%8B%A4" class="anchor" href="#%ED%95%9C%EA%B5%AD%EC%82%AC%EC%9D%B4%EB%B2%84%EA%B2%B0%EC%A0%9Ckcp%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%9A%B0%EC%BB%A4%EB%A8%B8%EC%8A%A4-%EA%B2%B0%EC%A0%9C%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%9E%85%EB%8B%88%EB%8B%A4"><span class="octicon octicon-link"></span></a>한국사이버결제(KCP)를 위한 우커머스 결제플러그인입니다.</h3>
 
 <p>본 플러그인은 주식회사 한국사이버결제(KCP)를 위한 우커머스 결제 플러그인입니다. </p>
 
-<div class="indent">
 <h3>
-	<a name="%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%82%AC%EC%9A%A9%ED%99%98%EA%B2%BD" class="anchor" href="#%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%82%AC%EC%9A%A9%ED%99%98%EA%B2%BD">
-	<span class="octicon octicon-link"></span></a>
-	플러그인 사용환경
-</h3>
+<a name="%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%82%AC%EC%9A%A9%ED%99%98%EA%B2%BD" class="anchor" href="#%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%82%AC%EC%9A%A9%ED%99%98%EA%B2%BD"><span class="octicon octicon-link"></span></a>플러그인 사용환경</h3>
 
-<p>WooCommerce 2.x<br />
+<p>WooCommerce 2.x
 PHP 5.3+ </p>
 
 <h3>
 <a name="%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95" class="anchor" href="#%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95"><span class="octicon octicon-link"></span></a>플러그인 설치 방법</h3>
-<p>	WOOCOMMERCE 워드프레스 쇼핑몰에서 결제를 도와주는 KCP 결제 플러그인 <br />
-	- 오른쪽 Download .zip file을 눌러 WOOCOMMERCE KCP 플러그인을 다운 받습니다.<br />
-	- 압축을 해제하여 woocommerce-KCP-plugin 폴더를 워드프레스 폴더에서 '/wp-content/plugins/'로 옮깁니다.<br />
-	<br />
-	설치를 완료 한뒤 워드프레스 관리자 페이지의 플로그인 탭에서 설치된 플러그인을 누릅니다.<br />
-	플러그인들 중 WooCommerce KCP 의 활성화 버튼을 눌러 활성화를 시킵니다.<br />
-</p>
-</div>
+
+<p>&lt;작성중&gt;</p>
 
 <h3>
 <a name="%EC%95%84%EC%A7%84%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4-%EB%A7%8C%EB%93%A4%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4" class="anchor" href="#%EC%95%84%EC%A7%84%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%B4-%EB%A7%8C%EB%93%A4%EC%97%88%EC%8A%B5%EB%8B%88%EB%8B%A4"><span class="octicon octicon-link"></span></a>아진시스템이 만들었습니다.</h3>
@@ -272,7 +54,6 @@ PHP 5.3+ </p>
 아진시스템은 워드프레스 쇼핑몰 제작 및 구축 전문 기업으로 중소기업의 온라인 전자상거래의 활성화를 위해 노력하고 있습니다. 
 <a href="http://www.ajinsys.com">http://www.ajinsys.com</a></p>
 
-<div class="indent">
 <h3>
 <a name="kcp-%EC%A0%84%EC%9E%90%EA%B2%B0%EC%A0%9C-%EA%B0%80%EC%9E%85-%EC%8B%A0%EC%B2%AD%ED%95%98%EA%B8%B0" class="anchor" href="#kcp-%EC%A0%84%EC%9E%90%EA%B2%B0%EC%A0%9C-%EA%B0%80%EC%9E%85-%EC%8B%A0%EC%B2%AD%ED%95%98%EA%B8%B0"><span class="octicon octicon-link"></span></a>KCP 전자결제 가입 신청하기</h3>
 
@@ -289,86 +70,28 @@ PHP 5.3+ </p>
 <a href="https://github.com/hongsw/ajin-kcp-payment-woocommerce/issues">https://github.com/hongsw/ajin-kcp-payment-woocommerce/issues</a>
 또한 기본적인 문서 가이드는 <a href="http://wpshop.ajinsys.com">http://wpshop.ajinsys.com</a> 페이지에 소개 되어 있으며 
 구축 문의는 <a href="mailto:ajinsys@ajinsys.com">ajinsys@ajinsys.com</a> 으로 해주시면 감사하겠습니다.</p>
-</div>
-
-<!-- ------------------------------------------------------------------------------------------------------------------->
-<!--------------------------------------------- Begin MailChimp Signup Form -------------------------------------------->
-<div id="mc_embed_signup">
-<form action="http://ajinsys.us6.list-manage1.com/subscribe/post?u=01ccb111b43b892d030a45b3c&amp;id=eeefba68fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<h3>워드프레스 쇼핑몰 최신정보 메일링 리스트 가입</h3>
-<div class="indicates-required"><span class="asterisk">*</span> 필수</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">이메일 주소  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_01ccb111b43b892d030a45b3c_eeefba68fa" value=""></div>
-	<div class="clear"><input type="submit" value="가입하기" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</form>
-</div>
-<!---------------------------------------------------------------------------------------------------------------------->
-<br />
-<!-- Event Space -->
-<h2> Event!! </h2>
-<p> 1. 플러그인을 다운받아보고 사용해본다.<br />
-2. 사용후 기분이 좋으면 '좋아요'를 클릭후, 간단한 사용후기와 '이벤트 신청합니다. ^^'를 댓글로 단다.<br />
-3. 기분좋게 기다린다. ^^<br />
-<br />
-이벤트를 진행해주시면 한국형 배송지 입력지원 플러그인을 제공해드립니다.<br />
-우커머스 기본은 한국에서 사용하기에 조금 불편합니다.<br />
-<br />
-<a href="http://wpshop.ajinsys.com/?page_id=675">[한국 우편번호 입력지원 플러그인 설명 링크]</a><br />
-</p>
-
-<!-- ------------------------------------------------------------------------------------------------------------------->
-
-<!--------------------------------------------- Facebook like button --------------------------------------------------->
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="fb-like" data-href="http://hongsw.github.io/ajin-kcp-payment-woocommerce/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-
-<!---------------------------------------------------------------------------------------------------------------------->
-
-<br />
-
-<!------------------------------------------------------- Comment ------------------------------------------------------>
-
-<div class="fb-comments" data-href="http://hongsw.github.io/ajin-kcp-payment-woocommerce/" data-numposts="5" data-colorscheme="light"></div>
-
-<!---------------------------------------------------------------------------------------------------------------------->
-        </section>
-
-
-
-        <aside id="sidebar">
-          <a href="https://github.com/hongsw/ajin-kcp-payment-woocommerce/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/hongsw/ajin-kcp-payment-woocommerce/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/hongsw/ajin-kcp-payment-woocommerce"></a> is maintained by <a href="https://github.com/hongsw">hongsw</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
- 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ajin-KCP-Payment-Woocommerce maintained by <a href="https://github.com/hongsw">hongsw</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-47565560-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
   </body>
 </html>
