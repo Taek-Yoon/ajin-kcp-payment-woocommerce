@@ -1,0 +1,259 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wc_korea_pack\n"
+"POT-Creation-Date: 2013-11-05 17:38+0900\n"
+"PO-Revision-Date: 2013-11-05 17:39+0900\n"
+"Last-Translator: 정대호 <ohead@studio-jt.co.kr>\n"
+"Language-Team: studio-jt <support@studio-jt.co.kr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-alipay.php:38
+#: ../gateway/paygate/class-wc-gateway-paygate-ars.php:39
+#: ../gateway/paygate/class-wc-gateway-paygate-bank.php:41
+#: ../gateway/paygate/class-wc-gateway-paygate-card.php:59
+#: ../gateway/paygate/class-wc-gateway-paygate-cup.php:38
+#: ../gateway/paygate/class-wc-gateway-paygate-mobile.php:39
+#: ../gateway/paygate/class-wc-gateway-paygate-phonebill.php:39
+msgid "Title"
+msgstr "제목"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-alipay.php:40
+#: ../gateway/paygate/class-wc-gateway-paygate-ars.php:41
+#: ../gateway/paygate/class-wc-gateway-paygate-bank.php:43
+#: ../gateway/paygate/class-wc-gateway-paygate-card.php:61
+#: ../gateway/paygate/class-wc-gateway-paygate-cup.php:40
+#: ../gateway/paygate/class-wc-gateway-paygate-mobile.php:41
+#: ../gateway/paygate/class-wc-gateway-paygate-phonebill.php:41
+#: ../shipping/condition-on-free.php:53
+msgid "This controls the title which the user sees during checkout."
+msgstr "이것은 사용자가 결제시 보는 제목을 제어합니다."
+
+#: ../gateway/paygate/class-wc-gateway-paygate-alipay.php:41
+msgid "Alipay Payment"
+msgstr "Alipay 결제"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-ars.php:42
+msgid "ARS Payment"
+msgstr "ARS 결제"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-bank.php:22
+msgid "Realtime Bank Transfer"
+msgstr "실시간 계좌이체"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-bank.php:44
+msgid "실시간 계좌이체 [ActiveX]"
+msgstr ""
+
+#: ../gateway/paygate/class-wc-gateway-paygate-card.php:62
+msgid "Card Payment"
+msgstr "카드 결제"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-cup.php:41
+msgid "cup Payment"
+msgstr "cup 결제"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-mobile.php:42
+msgid "Mobile Payment"
+msgstr "핸드폰 소액 결제"
+
+#: ../gateway/paygate/class-wc-gateway-paygate-phonebill.php:42
+msgid "Phonebill Payment"
+msgstr "폰빌 결제"
+
+#: ../gateway/paygate/paygate.php:63 ../shipping/condition-on-free.php:45
+msgid "Enable/Disable"
+msgstr "활성화/비활성화"
+
+#: ../gateway/paygate/paygate.php:65
+msgid "Enable"
+msgstr "활성화"
+
+#: ../gateway/paygate/paygate.php:69
+msgid "상점 아이디"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:71
+msgid ""
+"상점아이디 paygate로 부터 발급받으신 상점 아이디(로그인 아이디)를 입력하세요)"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:76
+msgid "Customer Message"
+msgstr "설명"
+
+#: ../gateway/paygate/paygate.php:78 ../gateway/paygate/paygate.php:79
+msgid "This controls the description which the user sees during checkout."
+msgstr "이것은 사용자가 결제시 보게될 설명을 제어합니다."
+
+#: ../gateway/paygate/paygate.php:82
+msgid "API 인증값"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:84
+msgid ""
+"상점관리자 로그인후 맴버관리 > 자기정보관리 > API인증값 <br/> <a href="
+"\"https://km.paygate.net/display/CS/Transaction+Hash+Verification"
+"%28SHA-256%29\">참조</a>"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:89
+msgid "결제창 스킨"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:93
+msgid ""
+"paygate 에서 제공하는 스킨 입니다. <br/> 마음에 드는 스킨이 없을 경우 별도 "
+"css 를 추가 하시기 바랍니다."
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:97
+msgid "에스크로 강제"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:100
+msgid ""
+"서비스 옵션에서 매매보호 이용함으로 설정된 경우 10만원 이상 현금거래시 유저"
+"가 매매보호 거래를 선택할 수 있는 화면이 제시됩니다. "
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:132
+msgid "결제가 실패했습니다. 다시 이용해 주세요"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:180
+#, php-format
+msgid "Order %s"
+msgstr "주문 %s"
+
+#: ../gateway/paygate/paygate.php:221
+msgid "결제"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:242 ../gateway/paygate/paygate.php:245
+#: ../gateway/paygate/paygate.php:257
+msgid "주문번호 검증 실패"
+msgstr ""
+
+#: ../gateway/paygate/paygate.php:317
+msgid "비정상적인 결제 시도"
+msgstr ""
+
+#: ../gateway/paygate/templates/admin-woocommerce-paygate.php:5
+msgid "Get started PayGate"
+msgstr "페이게이트 시작"
+
+#: ../gateway/paygate/templates/admin-woocommerce-paygate.php:7
+msgid "Paygate 상점관리자 "
+msgstr ""
+
+#: ../gateway/paygate/templates/admin-woocommerce-paygate.php:10
+msgid "Join"
+msgstr "가입"
+
+#: ../gateway/paygate/templates/admin-woocommerce-paygate.php:16
+msgid "Gateway Disabled"
+msgstr "결제 사용"
+
+#: ../gateway/paygate/templates/admin-woocommerce-paygate.php:16
+msgid "This Gateway does not support your store currency."
+msgstr "이 결제는 상점의 통화를 지원하지 않습니다."
+
+#: ../includes/options.php:6
+msgid "WooCommerce Paygate JT"
+msgstr ""
+
+#: ../includes/options.php:8
+msgid "하나의이름"
+msgstr ""
+
+#: ../includes/options.php:9
+msgid "결제 정보 입력시 이름에 하나의 입력 값만을 적용합니다."
+msgstr ""
+
+#: ../includes/options.php:15
+msgid "회사이름삭제"
+msgstr ""
+
+#: ../includes/options.php:16
+msgid "회사 이름을 사용하지 않습니다."
+msgstr ""
+
+#: ../includes/options.php:22
+msgid "우편번호검색"
+msgstr ""
+
+#: ../includes/options.php:23
+msgid "한국 우편번호 검색을 사용."
+msgstr ""
+
+#: ../includes/options.php:26
+msgid ""
+"사용할 경우 도시 이름, 국가 선택 입력박스를 제거하며, 주소 입력 순서가 변경됩"
+"니다."
+msgstr ""
+
+#: ../includes/options.php:52
+msgid "Paygate JT"
+msgstr ""
+
+#: ../includes/options.php:130
+msgid "지역명을 입력하세요"
+msgstr ""
+
+#: ../shipping/condition-on-free.php:11 ../shipping/condition-on-free.php:12
+#: ../shipping/condition-on-free.php:54
+msgid "조건부 무료"
+msgstr ""
+
+#: ../shipping/condition-on-free.php:47
+msgid "조건부 무료 배송 활성화"
+msgstr ""
+
+#: ../shipping/condition-on-free.php:51
+#, fuzzy
+msgid "Method Title"
+msgstr "방법 제목"
+
+#: ../shipping/condition-on-free.php:58
+#, fuzzy
+msgid "Method availability"
+msgstr "방법 가능성"
+
+#: ../shipping/condition-on-free.php:63
+#, fuzzy
+msgid "All allowed countries"
+msgstr "모든 허용된 국가"
+
+#: ../shipping/condition-on-free.php:64 ../shipping/condition-on-free.php:68
+#, fuzzy
+msgid "Specific Countries"
+msgstr "특정 국가"
+
+#: ../shipping/condition-on-free.php:76
+#, fuzzy
+msgid "Delivery Fee"
+msgstr "배달 수수료"
+
+#: ../shipping/condition-on-free.php:82
+msgid ""
+"조건부 무료 배송에 얼마의 배송료를 원하시나요? 무료를 선택하면 무시하세요. 비"
+"활성화 하려면 비워두세요."
+msgstr ""
+
+#: ../shipping/condition-on-free.php:88
+msgid "무료 배송 최소 금액"
+msgstr ""
+
+#: ../shipping/condition-on-free.php:94
+msgid "설정한 금액보다 주문금액이 클경우 배송료는 무료입니다."
+msgstr ""
+
+#~ msgid "This controls the title which the user sees during checkout"
+#~ msgstr "이것은 사용자가 결제시 보는 제목을 제어합니다"

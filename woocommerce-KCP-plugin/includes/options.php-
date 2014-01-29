@@ -1,0 +1,102 @@
+<?php
+class WC_KCP_module_options {
+    function __construct(){
+        $this->settings = array(
+            array( 'title' => __( 'WooCommerce KCP Module', 'wc_kcp' ), 'type' => 'title', 'desc' => '', 'id' => 'kcpm_general_options' ),
+           
+        );
+        
+        //우커머스 관리자 탭추가
+        add_filter('woocommerce_settings_tabs_array', array($this, 'settings_tabs_array') );
+        //관리자 옵션 페이지
+        add_action('woocommerce_settings_tabs_kcpm', array($this, 'admin_option_page') );
+        // 관리자 옵션 저장
+        add_action('woocommerce_update_options_kcpm', array($this, 'update_option') );
+        //주소 필드 수정
+        add_filter('woocommerce_default_address_fields', array($this, 'default_address_fields') );
+        // 주소 출력 
+        add_filter('woocommerce_my_account_my_address_formatted_address', array($this, 'my_address_formatted_address') );
+    }
+    
+    //우커머스 관리자 탭추가
+    function settings_tabs_array($tabs){
+        $tabs['kcpm'] =  __( 'KCP', 'wc_kcp' );
+        return $tabs;
+    }
+    
+    //관리자 옵션 페이지
+    function admin_option_page(){
+        woocommerce_admin_fields( $this->settings );    
+    }
+    
+    //관리자 옵션 저장
+    function update_option(){
+        woocommerce_update_options( $this->settings );   
+    }
+    
+    //주소 필드 수정
+    function default_address_fields($fields){
+        $new_fields = array();
+        
+        if( get_option('woocommerce_kcpm_namefix') == 'yes' ){
+            $fields['first_name']['class'] = array( 'form-row-wide' );
+            unset($fields['last_name']);
+        }
+
+        if( get_option('woocommerce_kcpm_companyfix') == 'yes' ){
+            unset($fields['company']);
+        }
+
+        if( get_option('woocommerce_kcpm_countryfix') == 'yes' ){
+            unset($fields['country']);
+            unset($fields['state']);
+            
+			/*
+            $fields['postcode']['class'] = array('form-row-wide');
+            $fields['postcode']['type'] = 'zip_code';
+            $fields['postcode']['clear'] = false;
+            
+            $fields['address_1']['placeholder'] = '동(읍/면) 까지의 주소';
+            $fields['address_1']['label'] = '동(읍/면) 까지의 주소';
+            
+            $fields['address_2']['placeholder'] = '동(읍/면) 이후의 주소';
+            $fields['address_2']['label'] = '동(읍/면) 이후의 주소';
+            $fields['address_2']['required'] = true;
+            
+            
+            foreach($fields as $key => $val ){
+                
+                if( $key == 'address_1'){
+                    $new_fields['postcode'] = $fields['postcode'];
+                } else if( $key == 'postcode' ){
+                    continue;
+                }
+                
+                $new_fields[$key] = $val;
+            }
+            $fields = $new_fields;*/
+        }
+        
+        return $fields;        
+    }
+
+    function my_address_formatted_address($fields){
+        $new_fields = array();
+        
+        if( get_option('woocommerce_kcpm_namefix') == 'yes' ){
+            unset($fields['last_name']);
+        }
+
+        if( get_option('woocommerce_kcpm_companyfix') == 'yes' ){
+            unset($fields['company']);
+        }
+
+        if( get_option('woocommerce_kcpm_zip_code') == 'yes' ){
+            //unset($fields['city']);
+            unset($fields['country']);
+            unset($fields['state']);
+        }
+        
+        return $fields;        
+    }
+}
