@@ -27,3 +27,6 @@ http://www.kcp.co.kr/service.payment.request.do 클릭 -> 신청서 내용 기�
 
 <strong> 기타 유료기술지원 및 연락 </strong><br />
 혹시 사용도중에 기술적인 문제가 있다면 github의 이슈페이지에 해당 사항을 등록해주시면 감사하겠습니다. https://github.com/hongsw/ajin-kcp-payment-woocommerce/issues 또한 기본적인 문서 가이드는 http://wpshop.ajinsys.com 페이지에 소개 되어 있으며 구축 문의는 ajinsys@ajinsys.com 으로 해주시면 감사하겠습니다.
+
+<strong> Ajin-WooCommerce-KCP-Plugin page </strong><br />
+<a href="http://hongsw.github.io/ajin-kcp-payment-woocommerce/">http://hongsw.github.io/ajin-kcp-payment-woocommerce/</a>
