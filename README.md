@@ -5,7 +5,7 @@ ajin-kcp-payment-woocommerce
 KCP Payment Gateway Plugin for WooCommerce, 한국사이버결제(KCP)용 우커머스 결제플러그인 입니다. 
  본 플러그인은 주식회사 한국사이버결제(KCP)를 위한 우커머스 결제 플러그인입니다.
 
-플러그인 사용환경
+플러그인 사용환경<br />
  WooCommerce 2.x
  PHP 5.3+
 
