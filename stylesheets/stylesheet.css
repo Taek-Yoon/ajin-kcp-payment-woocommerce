@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Nanum Gothic Coding', monospace;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -80,7 +81,6 @@ header h1 {
   line-height: 1;
   margin-bottom: 0.2em;
   width: 540px;
-  font-family: 'Nanum Gothic Coding', monospace;
 }
 
 header h2 {
@@ -90,7 +90,6 @@ header h2 {
   line-height: 1.3;
   width: 540px;
   letter-spacing: 0;
-  font-family: 'Nanum Gothic Coding', monospace;
 }
 
 .inner {
