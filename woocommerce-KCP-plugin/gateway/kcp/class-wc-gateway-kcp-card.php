@@ -557,8 +557,8 @@ class WC_Gateway_KCP_card extends WC_Gateway_KCP {
         /* ============================================================================== */
         /* =   01. 지불 데이터 셋업 (업체에 맞게 수정)                                  = */
         /* = -------------------------------------------------------------------------- = */
-		//$g_conf_home_dir = "/home/webadmin/sancheong.ajinsys.com/wp-content/plugins/woocommerce-KCP-plugin/KCP/";
-		$g_conf_home_dir = plugin_dir_path( __FILE__ )."KCP/";
+		//$g_conf_home_dir = "/www/public_html/wp-content/plugins/woocommerce-KCP-plugin/kcp/modules/";
+		$g_conf_home_dir = plugin_dir_path( __FILE__ )."kcp/modules/";
 
         /* ============================================================================== */
         /* =   02. 쇼핑몰 지불 정보 설정                                                = */
