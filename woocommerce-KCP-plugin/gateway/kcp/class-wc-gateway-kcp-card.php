@@ -778,7 +778,8 @@ class WC_Gateway_KCP_card extends WC_Gateway_KCP {
 		
 		return array(
 			'result' 	=> 'success',
-			'redirect'	=> add_query_arg('order', $order->id, add_query_arg('key', $order->order_key, get_permalink(get_option('woocommerce_pay_page_id'))))
+			'redirect'	=> add_query_arg('order', $order->id, add_query_arg('key', $order->order_key, get_permalink(woocommerce_get_page_id('pay')
+)))
     		);
 	}
 	
